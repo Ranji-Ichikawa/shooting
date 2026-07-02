@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>シューティングゲーム</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-container">
+  <canvas id="game" width="480" height="640"></canvas>
+
+  <div id="start-screen" class="overlay">
+    <h1>SHOOTING GAME</h1>
+    <p>矢印キー / WASD で移動<br>スペースキーで攻撃</p>
+    <button id="start-btn">スタート</button>
+  </div>
+
+  <div id="gameover-screen" class="overlay hidden">
+    <h1>GAME OVER</h1>
+    <p id="final-score">SCORE: 0</p>
+    <button id="retry-btn">もう一度</button>
+  </div>
+
+  <div id="hud">
+    <span id="score">SCORE: 0</span>
+    <span id="lives">LIFE: 3</span>
+  </div>
+</div>
+<script src="client/net.js"></script>
+<script src="client/input.js"></script>
+<script src="client/renderer.js"></script>
+<script src="client/main.js"></script>
+</body>
+</html>
